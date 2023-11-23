@@ -8,12 +8,12 @@ default answered_questions1 = []
 #music and sounds
 define audio.musicnormal = "music/calmmelodytoi.mp3"
 define audio.tick = "music/slowticking.mp3"
-define audio.musmenu = "music/musmenu.mp3"
+define audio.musicmenu = "music/musmenu.mp3"
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
 # Например, сцену bg room можно вызвать файлом "bg room.png",
 # а eileen happy — "eileen happy.webp", и тогда они появятся в игре.
-play music musmenu
+play music musicmenu
 
 # Игра начинается здесь:
 label start:
@@ -140,7 +140,7 @@ label first_ending:
     stop music
     show damian122
     u "Хотя.. Может остаться тут будет более безопасно"
-    u "Мало ли что там снаружи млжет твориться.."
+    u "Мало ли что там снаружи может твориться.."
     hide damian122
 
     u "По итогу, я остался в комнате"
