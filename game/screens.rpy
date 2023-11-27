@@ -359,12 +359,12 @@ screen main_menu():
         idle "gui/text.png"
         hover "gui/hightext2.png"
 
-        hotspot(215, 390, 260, 110) action Start()
-        hotspot(215, 510, 320, 90) action ShowMenu("load")
-        hotspot(215, 613, 340, 90) action ShowMenu("preferences")
-        hotspot(215, 730, 235, 85) action ShowMenu("about")
-        hotspot(215, 830, 247, 85) action ShowMenu("help")
-        hotspot(215, 930, 230, 85) action Quit(confirm = True)
+        hotspot(215, 390, 270, 110) action Start()
+        hotspot(215, 510, 330, 95) action ShowMenu("load")
+        hotspot(215, 613, 350, 95) action ShowMenu("preferences")
+        hotspot(215, 725, 250, 100) action ShowMenu("about")
+        hotspot(215, 825, 260, 100) action ShowMenu("help")
+        hotspot(215, 930, 230, 95) action Quit(confirm = True)
 
 
 
