@@ -57,6 +57,7 @@ style scrollbar:
 
 style vscrollbar:
     xsize gui.scrollbar_size
+    unscrollable "hide"
     base_bar Frame("gui/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
     thumb Frame("gui/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
 
@@ -93,6 +94,43 @@ style frame:
 ## применить к ним настройки стиля.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
+
+screen dictionary:
+    tag menu
+    add "gui/dictionary.png"
+
+    hbox:
+        xsize 1900
+        ysize 900
+        xpos 60
+        ypos 60
+
+        viewport id "vp":
+            xsize 1800
+            draggable True
+            mousewheel True
+            
+        
+            # Контейнер, который располагает элементы словаря сверху вниз
+            vbox:
+                xalign 0.05
+                yalign 0.05
+                spacing 30
+                
+
+                if persistent.dict1 == True:
+                    hbox :
+                        add "images/dict/meow" #название файла картинки, еще можно добавить информацию про каждого персонажа и портрет, чтобы игрок пониал ак они выглядят и все ткое
+                        null width 40 #расстояние между фото и картинки
+                        text "meow"
+                if persistent.dict2 == True:
+                    hbox:
+                        text "kittens are the best"        
+        
+        vbar value YScrollValue("vp")
+
+    textbutton _("Назад") xalign 0.05 yalign 0.95 action Return()
+
 
 screen say(who, what):
     style_prefix "say"
@@ -306,6 +344,8 @@ screen navigation():
             textbutton _("Сохранить") action ShowMenu("save")
 
         textbutton _("Загрузить") action ShowMenu("load")
+
+        textbutton _("Словарь") action ShowMenu("dictionary")
 
         textbutton _("Настройки") action ShowMenu("preferences")
 
@@ -757,6 +797,12 @@ screen preferences():
 
                     bar value Preference("auto-forward time")
 
+                    
+                    spacing 20
+                    label _("Язык")   
+                    textbutton "Русский" action Language(None) 
+                    textbutton "English" action Language("english") 
+
                 vbox:
 
                     if config.has_music:
@@ -791,6 +837,11 @@ screen preferences():
                         textbutton _("Без звука"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+
+                #vbox:
+                #    label _("Язык")   
+                #    textbutton "Русский" action Language(None) 
+                #   textbutton "English" action Language("english")        
 
 
 style pref_label is gui_label
@@ -1573,6 +1624,7 @@ style scrollbar:
 
 style vscrollbar:
     variant "small"
+    unscrollable "hide"
     xsize gui.scrollbar_size
     base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
     thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)

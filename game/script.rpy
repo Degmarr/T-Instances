@@ -1,7 +1,7 @@
 ﻿# Вы можете расположить сценарий своей игры в этом файле.
 
 # Определение персонажей игры.
-define d = Character('Damian', color="#a48ce1")
+define d = Character(_('Демиан'), color="#a48ce1")
 define u = Character('???', color="ffffff")
 default answered_questions1 = []
 
@@ -63,6 +63,8 @@ label start:
     u "Теперь я живу в подобии вивария, где все люди это подопытные, а над ними проводят эксперименты.
 "
     u "И эта комната - мое место жительства."
+
+    $ persistent.dict1 = True
 
     scene bg roomnight
     with dissolve
@@ -302,7 +304,8 @@ label first_ending:
     play sound g2
     "А если Бог разговаривает с тобой, то это.."
     play sound g3
-    "ШИЗОФРЕНИЯ"
+    "ШиЗоФрЕнИя"
+    
     scene bg black
     return
 
