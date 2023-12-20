@@ -4,5 +4,5 @@ translate english strings:
 
     # game/options.rpy:15
     old "Transition of Instances"
-    new ""
+    new "Transition of Instances"
 

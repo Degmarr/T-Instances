@@ -276,65 +276,65 @@ translate english strings:
 
     # game/screens.rpy:1087
     old "Левый клик"
-    new ""
+    new "Left Click"
 
     # game/screens.rpy:1091
     old "Клик колёсиком"
-    new ""
+    new "Middle Click"
 
     # game/screens.rpy:1095
     old "Правый клик"
-    new ""
+    new "Right Click"
 
     # game/screens.rpy:1099
     old "Колёсико вверх\nКлик на сторону отката"
-    new ""
+    new "Mouse Wheel Up \n Click Rollback Side"
 
     # game/screens.rpy:1103
     old "Колёсико вниз"
-    new ""
+    new "Mouse Wheel Down"
 
     # game/screens.rpy:1110
     old "Правый триггер\nA/Нижняя кнопка"
-    new ""
+    new "Right Trigger \n A/`bottom Button"
 
     # game/screens.rpy:1114
     old "Левый Триггер\nЛевый Бампер"
-    new ""
+    new "Lefy trigger \n Left Shoulder"
 
     # game/screens.rpy:1118
     old "Правый бампер"
-    new ""
+    new "Right Shoulder"
 
     # game/screens.rpy:1123
     old "Крестовина, Стики"
-    new ""
+    new "D-Pad, Sticks"
 
     # game/screens.rpy:1127
     old "Начало, Руководство"
-    new ""
+    new "Start, Guide"
 
     # game/screens.rpy:1131
     old "Y/Верхняя кнопка"
-    new ""
+    new "Y/Top Button"
 
     # game/screens.rpy:1134
     old "Калибровка"
-    new ""
+    new "Calibrate"
 
     # game/screens.rpy:1199
     old "Да"
-    new ""
+    new "Yes"
 
     # game/screens.rpy:1200
     old "Нет"
-    new ""
+    new "No"
 
     # game/screens.rpy:1246
     old "Пропускаю"
-    new ""
+    new "Skipping"
 
     # game/screens.rpy:1557
     old "Меню"
-    new ""
+    new "Menu"
 
