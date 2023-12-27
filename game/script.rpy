@@ -22,6 +22,19 @@ play music musicmenu
 
 # Игра начинается здесь:
 label start:
+    "Выберите персонажа"
+    show damian121
+    show maarten111
+    menu:
+        "Маартен":
+            hide damian121
+            jump maarten_start
+        "Демиан":
+            hide maarten111
+            jump demian_start
+    return        
+
+label demian_start:
     stop music
     scene bg black
 
@@ -197,10 +210,10 @@ label room_questions:
     u "Я подошел к Риису и попытался нащупать пульс или хоть узнать есть ли дыхание"
     u "Мои руки дрожали"
    
-    show damian232
+    
     u "Но пока я тянул руку, меня что-то остановило"
     u "Будто невидимая сила не позволяла мне их трогать"
-    hide damian232
+
 
     show damian132
     u "От чего мне стало более тревожно"
