@@ -1,6 +1,9 @@
 define m = Character(_('Маартен'), color="#c15c5c")
 define y = Character('???', color="ffffff")
-
+define audio.h1 = "music/h1sound.mp3"
+define audio.h2 = "music/h2sound.mp3"
+define audio.h3 = "music/h3sound.mp3"
+define audio.h4 = "music/h4sound.mp3"
 label maarten_start:
     play music musicnormal
     show bg black
@@ -134,6 +137,15 @@ label maarten_start:
         y "За что.. Откуда оно вообще взялось?"
         hide maarten132
 
+        menu:
+            "Спокойно все осмотреть":
+                jump forth_ending
+            "Побежать":
+                jump third_ending
+        return        
+
+        
+    label third_ending:
         show maarten331
         y "Я не могу так просто стоять и плакать"
         hide maarten331
@@ -167,13 +179,44 @@ label maarten_start:
         
         show bg roomnight with dissolve
         play sound door1
-        y "Когда я открыла дверь его комнаты, свет его настольной лампы ослепил мои глаза, а он сам сидел на кровати, будто ждал меня"
+        y "Когда я открыла дверь его комнаты, свет его настольной лампы ослепил мои глаза, а он сам стоял почти возле двери, будто ждал меня"
          
         y "Мои колени пошатнулись у дверного проема и в глазах потемнело"
         with Shake((0, 0, 0, 0), 3.0, dist=30)
         show bg black
 
+    label forth_ending:
+        stop music
+        scene bg mainhall
         
+        y "Я медленно вышла из кабинета, наощупь опираясь об стены"
+        
+        y "Колени подкашивались, сердце стучало в ушах"
+        
+        y "А вдруг.. вдруг все мертвы?.."
+        
+        y "Когда я посмотрела налево, я увидела лежащее тело моей подруги.. все в крови"
+        
+        y "Я зажмурила глаза, постараясь не думать и не замечать что-либо здесь"
+        scene bg dormitory_hall
+        y "Я просто медленно шла до дормитория, а дальше до своей комнаты"
+        play sound h1
+        y "Вдруг раздался резкий звук"
+        show maarten232
+        y "Что это??"
+        hide maarten232
+        y "Я обернулась к дверям сзади  меня и.."
+        scene bg black 
+        with dissolve
+        play sound h2
+        y "Здесь чей то силуэт.."
+        scene bg shadow
+        play sound h3
+        y "Сердце будто разрывается.."
+        scene bg face
+        play sound h4
+        y " . . . "
+        return
         
 
 
