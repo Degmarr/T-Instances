@@ -95,7 +95,7 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-screen dictionary:
+screen handbook:
     tag menu
     add "gui/dictionary.png"
 
@@ -120,9 +120,12 @@ screen dictionary:
 
                 if persistent.dict1 == True:
                     hbox :
-                        add "images/dict/meow" #название файла картинки, еще можно добавить информацию про каждого персонажа и портрет, чтобы игрок пониал ак они выглядят и все ткое
+                        add "images/dict/profile.png"
+                        #add "images/dict/profile.png" #название файла картинки, еще можно добавить информацию про каждого персонажа и портрет, чтобы игрок пониал ак они выглядят и все ткое
                         null width 40 #расстояние между фото и картинки
-                        text "meow"
+                        text "Я"
+                        text "Возраст >17?"
+                        
                 if persistent.dict2 == True:
                     hbox:
                         text "kittens are the best"        
@@ -295,6 +298,7 @@ screen quick_menu():
             textbutton _("Б.Сохр") action QuickSave()
             textbutton _("Б.Загр") action QuickLoad()
             textbutton _("Опции") action ShowMenu('preferences')
+        
 
 
 ## Данный код гарантирует, что экран быстрого меню будет показан в игре в любое
@@ -345,7 +349,7 @@ screen navigation():
 
         textbutton _("Загрузить") action ShowMenu("load")
 
-        textbutton _("Словарь") action ShowMenu("dictionary")
+        textbutton _("Справочник") action ShowMenu("handbook")
 
         textbutton _("Настройки") action ShowMenu("preferences")
 
@@ -1648,3 +1652,4 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
